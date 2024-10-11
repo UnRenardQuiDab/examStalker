@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  background-image: url('/public/grass.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
