@@ -3,8 +3,11 @@
   background-image: url('/public/grass.jpg');
   background-repeat: repeat;
   background-position: center;
+  flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   display: flex;
+  justify-content: space-between;
+  padding-top: 5vh;
 }
 
