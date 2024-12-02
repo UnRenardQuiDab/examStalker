@@ -1,0 +1,15 @@
+.Player {
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+	width: 10vw;
+	transition: 2s;
+	justify-content: center;
+}
+
+.Player h1 {
+	color: white;
+	margin: 1vh 0;
+	font-size: 3vh;
+}

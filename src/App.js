@@ -1,5 +1,5 @@
 import './App.css';
-import Horse from './components/Horse';
+import Line from './components/Line';
 import useExam from './hooks/useExam';
 
 function App() {
@@ -8,16 +8,21 @@ function App() {
 
   return (
     <div className="App">
-      <Horse />
-      <Horse />
-      <Horse />
-      <Horse /> <Horse />
-      <Horse />
-      <Horse /><Horse />
-      <Horse />
-      <Horse /><Horse />
-      <Horse />
-      <Horse />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
+      <Line />
      
     </div>
   );
