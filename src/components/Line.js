@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './Line.css';
 import Horse from './Horse';
 import Player from './Player';

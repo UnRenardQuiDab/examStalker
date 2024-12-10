@@ -44,7 +44,6 @@ function App() {
         else if (data.type === 'update') {
           updateUser(data.payload);
         }
-        console.log(data);
       }
     },
     shouldReconnect: (closeEvent) => true,

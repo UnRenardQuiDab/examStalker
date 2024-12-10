@@ -32,7 +32,6 @@ export const ExamsProvider = ({ children }) => {
   const updateExamToStalk = (examId) => {
     setExamToStalk(examId);
     localStorage.setItem("ExamToStalk", examId);
-    console.log("examId", examId);
   };
 
 
