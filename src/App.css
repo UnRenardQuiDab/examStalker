@@ -1,13 +1,20 @@
 .App {
-  text-align: center;
   background-image: url('/public/grass.jpg');
   background-repeat: repeat;
   background-position: center;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+}
+
+.LineList {
+  position: absolute;
+  top: 0;
+  margin-top: 5vh;
+  width: 100vw;
+  height: 95vh;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding-top: 5vh;
 }
 

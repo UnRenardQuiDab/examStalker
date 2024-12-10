@@ -3,20 +3,13 @@ import './Line.css';
 import Horse from './Horse';
 import Player from './Player';
 
-function Line() {
-  
-  const getRandomPosition = () => {
-    return Math.floor(Math.random() * 90);
-  }
-  const [position, setPosition] = useState(0);
-  
-
+function Line({login, grade}) {
 
   return (
     <div className="Line">
-      <Horse position={position} />
+      <Horse position={grade * 0.90} />
 	  <div className='Lane'></div>
-	  <Player position={position} />
+	  <Player position={grade * 0.90} login={login}/>
     </div>
   );
 }

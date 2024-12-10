@@ -1,13 +1,13 @@
 import './Player.css';
 
-function Player({ position }) {
+function Player({ login, position }) {
   return (
     <div className="Player"
 	  style={{
 		transform: `translateX(${position}vw)`,
 	  }}
 	>
-      <h1>bwisniew</h1>
+      <h1>{login}</h1>
     </div>
   );
 }
