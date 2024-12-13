@@ -6,7 +6,7 @@ const ExamsContext = createContext();
 export const ExamsProvider = ({ children }) => {
 
   const [exams, setExams] = useState([]);
-  const [apiUrl, setApiUrl] = useState(localStorage.getItem("ApiUrl") || "http://localhost:3000");
+  const [apiUrl, setApiUrl] = useState(localStorage.getItem("ApiUrl") || "https://projects-tracker.ibertran.dev");
   const [examToStalk, setExamToStalk] = useState(localStorage.getItem("ExamToStalk") || null);
   const [ws, setWs] = useState(null);
 
@@ -42,7 +42,7 @@ export const ExamsProvider = ({ children }) => {
 
   useEffect(() => {
     if (apiUrl.startsWith("https")) {
-      setWs(`ws://${apiUrl.substring(8)}/exams/${examToStalk}/notify`);
+      setWs(`wss://${apiUrl.substring(8)}/exams/${examToStalk}/notify`);
     }
     else {
       setWs(`ws://${apiUrl.substring(7)}/exams/${examToStalk}/notify`);
