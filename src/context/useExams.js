@@ -6,8 +6,7 @@ const ExamsContext = createContext();
 export const ExamsProvider = ({ children }) => {
 
   const [exams, setExams] = useState([]);
-  const apiUrl = "http://z1r5p2:3000";
-  // const apiUrl = "https://projects-tracker.ibertran.dev";
+  const apiUrl = "https://projects-tracker.ibertran.dev";
   const [examToStalk, setExamToStalk] = useState(localStorage.getItem("ExamToStalk") || null);
   const [ws, setWs] = useState(null);
 
