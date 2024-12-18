@@ -1,16 +1,15 @@
 .Player {
 	position: absolute;
 	display: flex;
-	align-items: flex-end;
-	height: 10%;
+	align-items: center;
+	height: 50%;
+	bottom: 0;
 	width: 10vw;
-	background-color: brown;
 	transition: 2s;
 	justify-content: center;
 }
 
 .Player h1 {
 	color: white;
-	font-size: 100%;
-	bottom: 0;
+	font-size: 1.5em;
 }

@@ -1,7 +1,7 @@
 import useWebSocket from 'react-use-websocket';
 import './App.css';
 import Line from './components/Line';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Menu from './components/Menu';
 import { useExams } from './context/useExams';
 
@@ -38,6 +38,10 @@ function App() {
     });
     setUsers(newUsers);
   };
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--nb-of-players', users.length);
+  }, [users]);
 
   useWebSocket(ws, {
     onMessage: (msg) => {

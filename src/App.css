@@ -4,6 +4,10 @@ html, body {
   overflow: hidden;
 }
 
+:root {
+  --nb-of-players: 0;
+}
+
 .App {
   background-image: url('/public/grass.jpg');
   background-repeat: repeat;
