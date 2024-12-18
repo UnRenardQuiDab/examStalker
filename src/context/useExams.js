@@ -6,7 +6,7 @@ const ExamsContext = createContext();
 export const ExamsProvider = ({ children }) => {
 
   const [exams, setExams] = useState([]);
-  const [apiUrl, setApiUrl] = useState(localStorage.getItem("ApiUrl") || "https://projects-tracker.ibertran.dev");
+  const apiUrl = "https://projects-tracker.ibertran.dev";
   const [examToStalk, setExamToStalk] = useState(localStorage.getItem("ExamToStalk") || null);
   const [ws, setWs] = useState(null);
 
@@ -23,11 +23,6 @@ export const ExamsProvider = ({ children }) => {
       setExamToStalk(null);
     }
   };
-
-  const updateApiUrl = (newApiUrl) => {
-		setApiUrl(newApiUrl)
-		localStorage.setItem("ApiUrl", newApiUrl)
-	}
 
   const updateExamToStalk = (examId) => {
     setExamToStalk(examId);
@@ -52,7 +47,7 @@ export const ExamsProvider = ({ children }) => {
   
 
   return (
-    <ExamsContext.Provider value={{ exams, apiUrl, updateApiUrl, examToStalk, updateExamToStalk, ws }}>
+    <ExamsContext.Provider value={{ exams, examToStalk, updateExamToStalk, ws }}>
       {children}
     </ExamsContext.Provider>
   );

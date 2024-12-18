@@ -28,7 +28,10 @@ function App() {
         }
       }
       else if (user.type === "end") {
-        newUsers = newUsers.filter((u) => u.login !== user.login);
+        const usr = newUsers.find((u) => u.login === user.login);
+        if (usr) {
+          usr.end_at = Date.now();
+        }
       }
     });
     setUsers(newUsers);

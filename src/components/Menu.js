@@ -1,4 +1,4 @@
-import { Alert, AlertIcon, AlertTitle, Button, Drawer, DrawerBody, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormControl, FormLabel, IconButton, Input, Select, useDisclosure } from "@chakra-ui/react";
+import { Alert, AlertIcon, AlertTitle, Button, Drawer, DrawerBody, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormControl, FormLabel, IconButton, Select, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { useExams } from "../context/useExams";
@@ -9,7 +9,7 @@ function Menu() {
 
 	const [opacity, setOpacity] = useState(0);
 
-	const {exams, apiUrl, updateApiUrl, examToStalk, updateExamToStalk } = useExams();
+	const {exams, examToStalk, updateExamToStalk } = useExams();
 
 	return (
 		<>
@@ -35,12 +35,6 @@ function Menu() {
           <DrawerHeader>ExamStalker Settings</DrawerHeader>
 
           <DrawerBody gap='2vh' display='flex' flexDir='column'>
-			
-			<FormControl isRequired>
-				<FormLabel>Api url</FormLabel>
-				<Input placeholder="Enter the api url" value={apiUrl} onChange={(e) => updateApiUrl(e.target.value)}/>
-			</FormControl>
-
 
 			{ exams.length > 0 ?
 				<FormControl isRequired>
