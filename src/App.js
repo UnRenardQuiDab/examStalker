@@ -28,9 +28,11 @@ function App() {
         }
       }
       else if (user.type === "end") {
-        const usr = newUsers.find((u) => u.login === user.login);
+        let usr = newUsers.find((u) => u.login === user.login);
         if (usr) {
-          usr.end_at = Date.now();
+          usr.grade = user.grade;
+          usr.closed_at = user.closed_at;
+          usr.needAnimation = true;
         }
       }
     });
@@ -58,7 +60,11 @@ function App() {
         <h1>{examToStalk}</h1>
         <div className='LineList'>
           {users.map((user, index) => (
-            <Line key={index} login={user.login} grade={user.grade} />
+            <Line
+              key={index} login={user.login} grade={user.grade}
+              state={user.closed_at && user.grade === 100 ? 'win' : (user.closed_at ? 'loose' : 'ongoing') }
+              animated={user.needAnimation}
+            />
           ))}
         </div>
       </div>

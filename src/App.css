@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .App {
   background-image: url('/public/grass.jpg');
   background-repeat: repeat;
@@ -5,6 +11,7 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .LineList {

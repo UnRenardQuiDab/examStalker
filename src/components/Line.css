@@ -2,7 +2,6 @@
 	display: flex;
 	width: 100%;
 	height: 15vh;
-	overflow: hidden;
 	margin-top: -2%;
 	position: relative;
 }
@@ -15,4 +14,5 @@
 	background-image: url('/public/grass.png');
 	background-size: contain;
 	background-position: bottom;
+	top: 0;
 }
