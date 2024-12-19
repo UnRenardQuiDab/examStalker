@@ -9,13 +9,13 @@ html, body {
 }
 
 .App {
-  background-image: url('/public/grass.jpg');
+  background-image: url('/public/grass.avif');
+  background-size: 15%;
   background-repeat: repeat;
   background-position: center;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 .LineList {

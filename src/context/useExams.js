@@ -6,7 +6,7 @@ const ExamsContext = createContext();
 export const ExamsProvider = ({ children }) => {
 
   const [exams, setExams] = useState([]);
-  const apiUrl = "https://projects-tracker.ibertran.dev";
+  const apiUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : "https://projects-tracker.ibertran.dev";
   const [examToStalk, setExamToStalk] = useState(localStorage.getItem("ExamToStalk") || null);
   const [ws, setWs] = useState(null);
 

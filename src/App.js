@@ -4,6 +4,7 @@ import Line from './components/Line';
 import { useEffect, useState } from 'react';
 import Menu from './components/Menu';
 import { useExams } from './context/useExams';
+import { Center, Spinner, Text } from '@chakra-ui/react';
 
 function App() {
 
@@ -62,15 +63,29 @@ function App() {
       <div className="App">
         <Menu />
         <h1>{examToStalk}</h1>
-        <div className='LineList'>
-          {users.map((user, index) => (
-            <Line
-              key={index} login={user.login} grade={user.grade}
-              state={user.closed_at && user.grade === 100 ? 'win' : (user.closed_at ? 'loose' : 'ongoing') }
-              animated={user.needAnimation}
-            />
-          ))}
-        </div>
+        {
+          users.length > 0 ?
+          <div className='LineList'>
+            {users.map((user, index) => (
+              <Line
+                key={index+user.login} login={user.login} grade={user.grade}
+                state={user.closed_at && user.grade === 100 ? 'win' : (user.closed_at ? 'loose' : 'ongoing') }
+                animated={user.needAnimation}
+                image={user.image}
+              />
+            ))}
+          </div> :
+          <Center
+            w="100%"
+            h="100%"
+            flexDirection="column"
+            gap='5vh'
+            color="white"
+          >
+            <Text fontSize="xl" fontWeight='bold'>No users connected</Text>
+            <Spinner size="xl" />
+          </Center>
+        }
       </div>
   );
 }

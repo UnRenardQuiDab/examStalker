@@ -10,18 +10,30 @@
 
 .Horse img {
 	position: absolute;
-	transform: scaleX(-1);
-	height: 95%;
+	height: 90%;
+	object-fit: cover;
+	overflow: visible;
 }
 
 @keyframes finish {
 	0% {
+		z-index: 10;
 		transform: translateY(0) rotate(0deg);
 	}
 	50% {
 		transform: translateY(-100px) rotate(180deg);
 	}
+	75% {
+		transform: translateY(-100px) rotate(420deg);
+	}
+	90% {
+		transform: translateY(100vh) rotate(420deg);
+	}
+	91% {
+		z-index: 0;
+		transform: translateY(10vh) rotate(0);
+	}
 	100% {
-		transform: translateY(100vh) rotate(360deg);
+		transform: translateY(0) rotate(0);
 	}
 }
